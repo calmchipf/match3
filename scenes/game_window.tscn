@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf18fjxjpw675"]
+
+[ext_resource type="Texture2D" uid="uid://b3b2yje10quni" path="res://art/Снимок экрана 2024-06-28 в 17.48.04.png" id="1_h6rfp"]
+
+[node name="game_window" type="Node2D"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_h6rfp")
+
+[node name="scoreboard" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="Node2D3" type="Node2D" parent="."]
