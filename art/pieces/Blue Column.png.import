@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3o220gxr2txh"
-path="res://.godot/imported/Blue Column.png-5f7ac77404c092a770f89ab101730e86.ctex"
+uid="uid://dp5in186ryp3n"
+path="res://.godot/imported/Blue Column.png-647e0bda4feb19caa2df6289937b7f21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/pieces/Blue Column.png"
-dest_files=["res://.godot/imported/Blue Column.png-5f7ac77404c092a770f89ab101730e86.ctex"]
+source_file="res://art/Pieces/Blue Column.png"
+dest_files=["res://.godot/imported/Blue Column.png-647e0bda4feb19caa2df6289937b7f21.ctex"]
 
 [params]
 

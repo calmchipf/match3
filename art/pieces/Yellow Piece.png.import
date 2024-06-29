@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btsaxa5websd6"
-path="res://.godot/imported/Yellow Piece.png-559d5182b443f16debd2410ca22fc9d1.ctex"
+uid="uid://jlbtbq4ciyo4"
+path="res://.godot/imported/Yellow Piece.png-f55be9fe0c14f8d6e3704d0f24ab2321.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/pieces/Yellow Piece.png"
-dest_files=["res://.godot/imported/Yellow Piece.png-559d5182b443f16debd2410ca22fc9d1.ctex"]
+source_file="res://art/Pieces/Yellow Piece.png"
+dest_files=["res://.godot/imported/Yellow Piece.png-f55be9fe0c14f8d6e3704d0f24ab2321.ctex"]
 
 [params]
 

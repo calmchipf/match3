@@ -10,15 +10,16 @@ config_version=5
 
 [application]
 
-config/name="match3"
+config/name="sketch"
+run/main_scene="res://scene/game_window.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=2436
-window/size/viewport_height=1125
-window/stretch/aspect="keep_width"
+window/size/viewport_width=576
+window/size/viewport_height=1024
+window/size/initial_position=Vector2i(288, 512)
 
 [input]
 

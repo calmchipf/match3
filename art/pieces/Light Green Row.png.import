@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://khm6w60rigc"
-path="res://.godot/imported/Light Green Row.png-feb4ac37082e8a7c6f5b083999bd85cb.ctex"
+uid="uid://c5c62dt4un5r5"
+path="res://.godot/imported/Light Green Row.png-f2101ef7f58fee33fa4a68e9aab9cfb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/pieces/Light Green Row.png"
-dest_files=["res://.godot/imported/Light Green Row.png-feb4ac37082e8a7c6f5b083999bd85cb.ctex"]
+source_file="res://art/Pieces/Light Green Row.png"
+dest_files=["res://.godot/imported/Light Green Row.png-f2101ef7f58fee33fa4a68e9aab9cfb2.ctex"]
 
 [params]
 

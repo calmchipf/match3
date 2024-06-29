@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5iijd7eikg8t"
-path="res://.godot/imported/Blue Piece.png-42a4b6db316178626bff6eb8248e5d3e.ctex"
+uid="uid://df3mmj8w6wsii"
+path="res://.godot/imported/Blue Piece.png-b77bfe6074b73b977ee1109d3e0dfc41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/pieces/Blue Piece.png"
-dest_files=["res://.godot/imported/Blue Piece.png-42a4b6db316178626bff6eb8248e5d3e.ctex"]
+source_file="res://art/Pieces/Blue Piece.png"
+dest_files=["res://.godot/imported/Blue Piece.png-b77bfe6074b73b977ee1109d3e0dfc41.ctex"]
 
 [params]
 
