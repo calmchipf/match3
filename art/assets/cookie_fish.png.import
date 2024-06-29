@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxw051ubcdnw3"
-path="res://.godot/imported/Green Piece.png-fd3ed518521a8d2821eea6c9be500df2.ctex"
+uid="uid://bvfm0rgj6j22n"
+path="res://.godot/imported/cookie_fish.png-1c1fb842a5bfe1455f32849c8d616772.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/pieces/Green Piece.png"
-dest_files=["res://.godot/imported/Green Piece.png-fd3ed518521a8d2821eea6c9be500df2.ctex"]
+source_file="res://art/assets/cookie_fish.png"
+dest_files=["res://.godot/imported/cookie_fish.png-1c1fb842a5bfe1455f32849c8d616772.ctex"]
 
 [params]
 

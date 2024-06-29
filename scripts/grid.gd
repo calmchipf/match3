@@ -15,7 +15,7 @@ var possible_pieces = [
 	preload("res://scene/green_piece.tscn"),
 	preload("res://scene/blue_piece.tscn"),
 	preload("res://scene/pink_piece.tscn"),
-	preload("res://scene/orange_piece.tscn")
+	preload("res://scene/red_piece.tscn")
 ];
 
 var all_pieces=[];

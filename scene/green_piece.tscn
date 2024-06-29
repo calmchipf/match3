@@ -1,9 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://daqliv7axl0yr"]
 
 [ext_resource type="PackedScene" uid="uid://dmo113318n85a" path="res://scene/Piece.tscn" id="1_txek4"]
-[ext_resource type="Texture2D" uid="uid://dxw051ubcdnw3" path="res://art/Pieces/Green Piece.png" id="2_4nl6a"]
+[ext_resource type="Texture2D" uid="uid://cs285ggpvsmpt" path="res://art/assets/block_green.png" id="2_q4lp1"]
 
 [node name="green_piece" instance=ExtResource("1_txek4")]
+scale = Vector2(1, 1)
 
 [node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_4nl6a")
+texture_filter = 2
+texture = ExtResource("2_q4lp1")

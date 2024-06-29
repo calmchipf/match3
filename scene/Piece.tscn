@@ -7,3 +7,4 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("1_qainq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)

@@ -11,15 +11,15 @@ config_version=5
 [application]
 
 config/name="sketch"
-run/main_scene="res://scene/game_window.tscn"
+run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=576
-window/size/viewport_height=1024
-window/size/initial_position=Vector2i(288, 512)
+window/size/viewport_width=780
+window/size/viewport_height=360
+window/size/initial_position=Vector2i(390, 180)
 
 [input]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxw051ubcdnw3"
-path="res://.godot/imported/Green Piece.png-fd3ed518521a8d2821eea6c9be500df2.ctex"
+uid="uid://ojgswngf3prg"
+path="res://.godot/imported/upbottom.png-95fac74ee9cedc0320ba2e247d7700de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/pieces/Green Piece.png"
-dest_files=["res://.godot/imported/Green Piece.png-fd3ed518521a8d2821eea6c9be500df2.ctex"]
+source_file="res://art/assets/grid_border/upbottom.png"
+dest_files=["res://.godot/imported/upbottom.png-95fac74ee9cedc0320ba2e247d7700de.ctex"]
 
 [params]
 
