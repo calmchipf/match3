@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cg3oxdflh7i4w"]
+[gd_scene load_steps=16 format=3 uid="uid://cg3oxdflh7i4w"]
 
 [ext_resource type="Texture2D" uid="uid://ctcnacpng6lis" path="res://art/assets/main_menu/logo.png" id="1_hmx08"]
 [ext_resource type="Script" path="res://main_menu.gd" id="1_ijg8d"]
@@ -11,6 +11,34 @@
 [ext_resource type="Texture2D" uid="uid://bbmuph3ull5ld" path="res://art/assets/main_menu/quit_button_unselected.png" id="8_3kuwp"]
 [ext_resource type="Texture2D" uid="uid://cncbuh2yxo10w" path="res://art/assets/main_menu/quit_button.png" id="9_2sp11"]
 [ext_resource type="Texture2D" uid="uid://gqw7a7bekg0w" path="res://art/assets/main_menu/repeating_bg.png" id="10_8o8ns"]
+
+[sub_resource type="Animation" id="Animation_qtyrs"]
+length = 30.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1950, 180), Vector2(-1950, 180)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5850, 180), Vector2(1950, 180)]
+}
 
 [sub_resource type="Animation" id="Animation_tiolh"]
 resource_name = "bg"
@@ -41,37 +69,26 @@ tracks/1/keys = {
 "values": [Vector2(5850, 180), Vector2(1950, 180)]
 }
 
-[sub_resource type="Animation" id="Animation_qtyrs"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_2bg8w"]
+resource_name = "transition"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.4, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1950, 180)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(5850, 180)]
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j7lux"]
 _data = {
 "RESET": SubResource("Animation_qtyrs"),
-"bg": SubResource("Animation_tiolh")
+"bg": SubResource("Animation_tiolh"),
+"transition": SubResource("Animation_2bg8w")
 }
 
 [node name="MainMenu" type="CanvasLayer"]
@@ -126,17 +143,17 @@ texture_normal = ExtResource("8_3kuwp")
 texture_hover = ExtResource("9_2sp11")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
 show_behind_parent = true
 visibility_layer = 2
+z_index = -1
 position = Vector2(1950, 180)
 scale = Vector2(2, 2)
 texture = ExtResource("10_8o8ns")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-visible = false
 show_behind_parent = true
 visibility_layer = 2
+z_index = -1
 position = Vector2(5850, 180)
 scale = Vector2(2, 2)
 texture = ExtResource("10_8o8ns")
@@ -145,5 +162,14 @@ texture = ExtResource("10_8o8ns")
 libraries = {
 "": SubResource("AnimationLibrary_j7lux")
 }
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
+offset_right = 780.0
+offset_bottom = 360.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="WaitTimer" type="Timer" parent="."]
 
 [connection signal="pressed" from="MarginContainer/LogoAndButtons/VBoxContainer/button_start" to="." method="_on_button_start_pressed"]
