@@ -172,4 +172,29 @@ color = Color(0, 0, 0, 0)
 
 [node name="WaitTimer" type="Timer" parent="."]
 
+[node name="left_border" type="MarginContainer" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 60.0
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="ColorRect" type="ColorRect" parent="left_border"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.588235)
+
+[node name="right_border" type="MarginContainer" parent="."]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="ColorRect" type="ColorRect" parent="right_border"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.588235)
+
 [connection signal="pressed" from="MarginContainer/LogoAndButtons/VBoxContainer/button_start" to="." method="_on_button_start_pressed"]

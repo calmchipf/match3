@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8fx8qai0bl8c"]
+
+[ext_resource type="Script" path="res://level_popup.gd" id="1_jnh0r"]
+
+[node name="level_popup" type="Node2D"]
+script = ExtResource("1_jnh0r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Window" type="Window" parent="VBoxContainer"]
+
+[node name="LevelNumber" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Missions" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckmarkLevel" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

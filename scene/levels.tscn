@@ -1,0 +1,117 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5boe88c0hej2"]
+
+[ext_resource type="Script" path="res://scene/levels.gd" id="1_1n8ln"]
+[ext_resource type="Texture2D" uid="uid://djywc1aw360fs" path="res://art/assets/levels_map/map1.png" id="2_8eotk"]
+[ext_resource type="Texture2D" uid="uid://b1oti43c02p7v" path="res://art/assets/levels_map/button1.png" id="2_p7rr5"]
+[ext_resource type="Texture2D" uid="uid://de3t44vo4orib" path="res://art/assets/levels_map/map2.png" id="3_b24gi"]
+[ext_resource type="Texture2D" uid="uid://doxwyacwqnfca" path="res://art/assets/levels_map/button2.png" id="3_gjm7a"]
+
+[sub_resource type="Animation" id="Animation_dkjkw"]
+resource_name = "levels_bg"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_8eotk"), ExtResource("3_b24gi")]
+}
+
+[sub_resource type="Animation" id="Animation_i8gy1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_8eotk")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dat37"]
+_data = {
+"RESET": SubResource("Animation_i8gy1"),
+"levels_bg": SubResource("Animation_dkjkw")
+}
+
+[node name="Levels" type="Node2D"]
+script = ExtResource("1_1n8ln")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+z_index = 3
+offset_left = 117.0
+offset_top = 175.0
+offset_right = 129.0
+offset_bottom = 184.0
+scale = Vector2(2, 2)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_p7rr5")
+texture_hover = ExtResource("3_gjm7a")
+
+[node name="right_border" type="MarginContainer" parent="CanvasLayer"]
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/right_border"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.588235)
+
+[node name="left_border" type="MarginContainer" parent="CanvasLayer"]
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 60.0
+grow_vertical = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/left_border"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.588235)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+show_behind_parent = true
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/MarginContainer"]
+libraries = {
+"": SubResource("AnimationLibrary_dat37")
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer"]
+show_behind_parent = true
+z_index = -1
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_8eotk")
